@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exchange Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f7;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .confirmation {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            width: 60%;
+            margin: 0 auto;
+        }
+        .confirmation p {
+            font-size: 18px;
+            color: #555;
+        }
+        .confirmation strong {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Exchange Request Submitted</h1>
+    <div class="confirmation">
+        <p><strong>Exchange Type:</strong> {{ exchange_type }}</p>
+        <p><strong>Payeer Account:</strong> {{ payeer_account }}</p>
+        <p><strong>Amount:</strong> {{ amount }}</p>
+        <p><strong>EVC Number:</strong> {{ evc_number }}</p>
+        <p>Thank you for your submission. Please proceed with the exchange manually.</p>
+    </div>
+
+</body>
+</html>

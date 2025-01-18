@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>labax oo hel - Exchange Platform</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background: #007bff;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        header .info {
+            text-align: right;
+        }
+        header .info p {
+            margin: 2px 0;
+        }
+        .notice {
+            background: #ffdf00;
+            padding: 10px 20px;
+            text-align: center;
+            font-weight: bold;
+            color: #333;
+        }
+        .form-container {
+            padding: 20px;
+        }
+        .exchange-form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .exchange-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .form-group .rate {
+            font-size: 14px;
+            color: gray;
+            margin-top: 5px;
+        }
+        .transaction-tabs {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .transaction-tabs div {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .transaction-table {
+            margin: 20px 0;
+        }
+        .transaction-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .transaction-table th, .transaction-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        .transaction-table th {
+            background: #007bff;
+            color: white;
+        }
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25d366;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>HADA LABAX OO HADA HEL</h1>
+        </div>
+        <div class="info">
+            <p>Work Time: 9:00 AM - 8:00 PM</p>
+            <p>Status: <strong style="color: #28a745;">Online</strong></p>
+        </div>
+    </header>
+
+    <div class="notice">
+        Welcome to labax Pay! Fast and secure exchange platform.
+    </div>
+
+    <div class="form-container">
+        <div class="exchange-form">
+            <h2>Exchange Now</h2>
+            <div class="form-group">
+                <label for="send">Send</label>
+                <select id="send">
+                    <option>USDT TRX</option>
+                    <option>Payeer USD</option>
+                    <option>EVC USD</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="receive">Receive</label>
+                <select id="receive">
+                    <option>USDT TRX</option>
+                    <option>Payeer USD</option>
+                    <option>EVC USD</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="amount">Amount to Send</label>
+                <input type="text" id="amount" placeholder="Enter amount">
+                <p class="rate">Exchange Rate: 1 USDT = 95 USD</p>
+            </div>
+            <div class="form-group">
+                <label for="reserve">Reserve Balance</label>
+                <input type="text" id="reserve" value="100 USDT" disabled>
+            </div>
+        </div>
+    </div>
+
+    <div class="transaction-tabs">
+        <div>Completed</div>
+        <div>Pending</div>
+        <div>Waiting for Payment</div>
+        <div>Canceled</div>
+    </div>
+
+    <div class="transaction-table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Send</th>
+                    <th>Receive</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>USDT TRX</td>
+                    <td>Payeer USD</td>
+                    <td>100</td>
+                    <td style="color: #28a745;">Completed</td>
+                </tr>
+                <tr>
+                    <td>EVC USD</td>
+                    <td>USDT TRX</td>
+                    <td>50</td>
+                    <td style="color: #ffc107;">Pending</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <a href="https://wa.me/+252613678628" class="whatsapp-btn">Contact Us</a>
+</body>
+</html>
